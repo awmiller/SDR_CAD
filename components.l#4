@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -1173,6 +1173,40 @@ Source: www.ti.com/.. slvs087l.pdf</description>
 <rectangle x1="-1.45" y1="2.23" x2="-1.15" y2="3.3" layer="51" rot="R180"/>
 <rectangle x1="-2.1" y1="2.23" x2="-1.8" y2="3.3" layer="51" rot="R180"/>
 </package>
+<package name="QFN_10_2X2MM_05-08-1534">
+<description>LF–7GHz Wideband Low Power Active Mixer
+&lt;ul&gt;
+&lt;li&gt;Wideband Frequency Range to 7GHz &lt;/li&gt;
+&lt;li&gt;Low Power: 2.7V to 3.6V, 40mA Supply &lt;/li&gt;
+&lt;li&gt;Supply Current Adjustable Down to 15mA &lt;/li&gt;
+&lt;li&gt;Up or Downconversion &lt;/li&gt;
+&lt;li&gt;OIP3: +20dBm at 3.6GHz Out &lt;/li&gt;
+&lt;li&gt;Conversion Gain: +1dB &lt;/li&gt;
+&lt;li&gt;Low LO Drive: –4dBm to +2dBm &lt;/li&gt;
+&lt;li&gt;LO Impedance Match Maintained During Shutdown &lt;/li&gt;
+&lt;li&gt;Enable Control, 10μA Shutdown Current &lt;/li&gt;
+&lt;li&gt;2kV ESD (HBM and CDM) &lt;/li&gt;
+&lt;li&gt;–40°C to 105°C Operation &lt;/li&gt;
+&lt;li&gt;Small 2mm × 2mm 10-Lead QFN Package&lt;/li&gt;
+&lt;/ul&gt;</description>
+<smd name="P$4" x="0.9" y="0" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$3" x="0.9" y="0.5" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$5" x="0.9" y="-0.5" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$9" x="-0.9" y="0" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$10" x="-0.9" y="0.5" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$8" x="-0.9" y="-0.5" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$1" x="-0.25" y="0.9" dx="0.25" dy="0.7" layer="1"/>
+<smd name="P$2" x="0.25" y="0.9" dx="0.25" dy="0.7" layer="1"/>
+<smd name="P$7" x="-0.25" y="-0.9" dx="0.25" dy="0.7" layer="1"/>
+<smd name="P$6" x="0.25" y="-0.9" dx="0.25" dy="0.7" layer="1"/>
+<smd name="P$11" x="0" y="0" dx="0.3" dy="0.5" layer="1" rot="R270"/>
+<rectangle x1="-1.05" y1="-1.05" x2="1.05" y2="1.05" layer="29" rot="R90"/>
+<wire x1="1.1" y1="-1.1" x2="1.1" y2="1.1" width="0.127" layer="51"/>
+<wire x1="1.1" y1="1.1" x2="-1.1" y2="1.1" width="0.127" layer="51"/>
+<wire x1="-1.1" y1="1.1" x2="-1.1" y2="-1.1" width="0.127" layer="51"/>
+<wire x1="-1.1" y1="-1.1" x2="1.1" y2="-1.1" width="0.127" layer="51"/>
+<circle x="-0.85" y="1.65" radius="0.1581125" width="0.127" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LTC225X">
@@ -1389,27 +1423,26 @@ Source: www.ti.com/.. slvs087l.pdf</description>
 <wire x1="-15.24" y1="-5.08" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
 </symbol>
 <symbol name="THS7530">
-<pin name="P$3" x="-5.08" y="5.08" visible="pad" length="middle" direction="nc"/>
-<pin name="P$4" x="-5.08" y="-5.08" visible="pad" length="middle" direction="nc"/>
-<pin name="P$5" x="10.16" y="-35.56" length="middle" direction="nc" rot="R90"/>
-<pin name="P$6" x="20.32" y="-35.56" length="middle" direction="nc" rot="R90"/>
-<pin name="P$7" x="30.48" y="-35.56" length="middle" direction="nc" rot="R90"/>
-<pin name="P$8" x="-5.08" y="-15.24" visible="pad" length="middle" direction="nc"/>
-<pin name="P$9" x="-5.08" y="15.24" visible="pad" length="middle" direction="nc"/>
-<pin name="P$10" x="45.72" y="5.08" visible="pad" length="middle" direction="out" rot="R180"/>
-<pin name="P$11" x="45.72" y="-5.08" visible="pad" length="middle" direction="out" rot="R180"/>
-<pin name="P$12" x="45.72" y="0" length="middle" direction="out" rot="R180"/>
-<pin name="P$13" x="-5.08" y="-22.86" length="middle" direction="nc"/>
-<pin name="P$14" x="-5.08" y="22.86" length="middle" direction="nc"/>
+<pin name="P$3" x="-5.08" y="5.08" visible="pad" length="middle" direction="in"/>
+<pin name="P$4" x="-5.08" y="-5.08" visible="pad" length="middle" direction="in"/>
+<pin name="VG+" x="12.7" y="-35.56" length="middle" direction="in" rot="R90"/>
+<pin name="VG-" x="30.48" y="-35.56" length="middle" direction="in" rot="R90"/>
+<pin name="PD_N" x="48.26" y="-22.86" length="middle" direction="in" rot="R180"/>
+<pin name="P$8" x="-5.08" y="-15.24" visible="pad" length="middle" direction="in"/>
+<pin name="P$9" x="-5.08" y="15.24" visible="pad" length="middle" direction="in"/>
+<pin name="VO+" x="48.26" y="-5.08" visible="pad" length="middle" direction="out" rot="R180"/>
+<pin name="VO-" x="48.26" y="5.08" visible="pad" length="middle" direction="out" rot="R180"/>
+<pin name="VOCM" x="48.26" y="-15.24" length="middle" direction="in" rot="R180"/>
+<pin name="VCL-" x="-5.08" y="-22.86" length="middle" direction="in"/>
+<pin name="VCL+" x="-5.08" y="22.86" length="middle" direction="in"/>
 <wire x1="10.16" y1="12.7" x2="10.16" y2="5.08" width="0.254" layer="94"/>
 <wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-5.08" x2="10.16" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-12.7" x2="33.02" y2="0" width="0.254" layer="94"/>
-<wire x1="33.02" y1="0" x2="23.876" y2="5.08" width="0.254" layer="94"/>
-<circle x="25.4" y="-5.08" radius="0.762" width="0.254" layer="94"/>
-<wire x1="23.876" y1="5.08" x2="10.16" y2="12.7" width="0.254" layer="94"/>
-<wire x1="40.64" y1="-5.08" x2="26.162" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="40.64" y1="5.08" x2="23.876" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="-12.7" x2="23.876" y2="-5.08" width="0.254" layer="94"/>
+<circle x="25.4" y="5.08" radius="0.762" width="0.254" layer="94"/>
+<wire x1="23.876" y1="-5.08" x2="33.02" y2="0" width="0.254" layer="94"/>
+<wire x1="33.02" y1="0" x2="10.16" y2="12.7" width="0.254" layer="94"/>
+<wire x1="43.18" y1="-5.08" x2="23.876" y2="-5.08" width="0.1524" layer="94"/>
 <wire x1="0" y1="-15.24" x2="20.32" y2="-15.24" width="0.1524" layer="94"/>
 <wire x1="20.32" y1="-15.24" x2="20.32" y2="-7.112" width="0.1524" layer="94"/>
 <wire x1="0" y1="15.24" x2="20.32" y2="15.24" width="0.1524" layer="94"/>
@@ -1428,10 +1461,13 @@ Source: www.ti.com/.. slvs087l.pdf</description>
 <text x="23.114" y="-15.24" size="1.27" layer="94">S</text>
 <wire x1="21.59" y1="-12.7" x2="22.352" y2="-15.24" width="0.1524" layer="94"/>
 <wire x1="22.352" y1="-15.24" x2="23.114" y2="-12.7" width="0.1524" layer="94"/>
-<wire x1="0" y1="25.4" x2="40.64" y2="25.4" width="0.1524" layer="94"/>
-<wire x1="40.64" y1="25.4" x2="40.64" y2="-30.48" width="0.1524" layer="94"/>
-<wire x1="40.64" y1="-30.48" x2="0" y2="-30.48" width="0.1524" layer="94"/>
+<wire x1="0" y1="25.4" x2="43.18" y2="25.4" width="0.1524" layer="94"/>
+<wire x1="43.18" y1="25.4" x2="43.18" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="43.18" y1="5.08" x2="43.18" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="43.18" y1="-5.08" x2="43.18" y2="-30.48" width="0.1524" layer="94"/>
+<wire x1="43.18" y1="-30.48" x2="0" y2="-30.48" width="0.1524" layer="94"/>
 <wire x1="0" y1="-30.48" x2="0" y2="25.4" width="0.1524" layer="94"/>
+<wire x1="43.18" y1="5.08" x2="26.162" y2="5.08" width="0.1524" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1626,6 +1662,32 @@ Source: www.ti.com/.. slvs087l.pdf</description>
 <connect gate="G$1" pin="P$6" pad="6"/>
 <connect gate="G$1" pin="P$7" pad="7"/>
 <connect gate="G$1" pin="P$8" pad="8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="THS7530">
+<gates>
+<gate name="G$1" symbol="THS7530" x="-20.32" y="0"/>
+</gates>
+<devices>
+<device name="" package="TSSOP14">
+<connects>
+<connect gate="G$1" pin="P$3" pad="3"/>
+<connect gate="G$1" pin="P$4" pad="4"/>
+<connect gate="G$1" pin="P$8" pad="8"/>
+<connect gate="G$1" pin="P$9" pad="9"/>
+<connect gate="G$1" pin="PD_N" pad="7"/>
+<connect gate="G$1" pin="VCL+" pad="14"/>
+<connect gate="G$1" pin="VCL-" pad="13"/>
+<connect gate="G$1" pin="VG+" pad="5"/>
+<connect gate="G$1" pin="VG-" pad="6"/>
+<connect gate="G$1" pin="VO+" pad="10"/>
+<connect gate="G$1" pin="VO-" pad="11"/>
+<connect gate="G$1" pin="VOCM" pad="12"/>
 </connects>
 <technologies>
 <technology name=""/>
